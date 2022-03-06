@@ -16,3 +16,31 @@ Strings:Una cadena de caracteres, Palabras i nombres de personas.
 Symbol:Es un valor unico que no es igual a ningun otro valor
 
 ############### TIPOS DATOS PRIMITIVOS ################
+Strings:
+let nombre = 'Peter Parker';
+console.log(nombre);
+
+Cuando se quiere cambiar el valor a la variable se hace de la siguiente forma:
+nombre = 'Ben Parker';
+console.log(nombre);
+
+Aqui se pueden renombrar variables:
+nombre = "Tia May";
+nombre = `Tia May`;
+
+Si se quiere saber que tipo de dato apunta a una variable, se hace de la siguiente forma:
+console.log(typeof nombre);
+
+let esMarvel = true;
+console.log(typeof esMarvel);
+
+let superPoder;
+console.log(typeof superPoder); ->undefined
+
+let soyNull = null;
+console.log(typeof soyNull);->object
+
+let symbol1 = Symbol('a');
+let symbol2 = Symbol('a');
+console.log(typeof symbol1);->object
+console.log(typeof symbol2);->object
