@@ -1,0 +1,18 @@
+Java Script Moderno
+
+Se pueden declarar Variables de las siguiente forma:
+const -> Son constantes las cuales nunca cambiara el valor
+var -> De pueden declarar, pero solo para navegadores muy antiguos ya que en los nuevos lo que puede pasar es que se pueden renombrar algunas variables del objeto WINDOW
+let -> De esta forma es como se declaran las variables en JavaScript moderno
+
+############### DATOS PRIMITIVOS ################
+Es una información que no es un objeto y son inmutables. En JavaScript hay 6 tipos de datos primitivos 
+
+Boolean : Solo son valores True ó False
+Null: Son valor en absoluto
+Undefined: Una variable declarada que aun no se le asigna un valor
+Number: Enteros, flotantes.
+Strings:Una cadena de caracteres, Palabras i nombres de personas.
+Symbol:Es un valor unico que no es igual a ningun otro valor
+
+############### TIPOS DATOS PRIMITIVOS ################
