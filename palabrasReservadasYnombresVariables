@@ -1,0 +1,18 @@
+Palabras Reservadas
+Son las Palabars que tienen un uso en especifico y solo se deben usar las palabras para las que fueron usuadas.
+
+Ejemplos de aplgunas palabras revervadas en JavaScript:
+break, case, catch,class,const,continue,debugger,default,delete,do,else,let,export,extends,finally,for,function,if,import,in,instanceof,new,return,super,switch,this,trow,
+try,typeof,var,void,while,with,yield.
+
+Palabras Reservadas en un futuro:
+enum,implements,interface,package,private,protected,public,static,await.
+
+Evitar usar:
+null,false,isNaN,NaN,isPrototypeOf,name,String,alert,undefined,hasOwnProperty,infinity,length,prototype,Number,toString,conform,true,undefined,isFinite,Math,valueOf,Object,prompt
+
+Se recomienda trabajar con el estandar, para poder crear variables.
+1.-No crear nombres de variables que comiencen con numero.
+2.-Si puede comenzar con guion bajo (_)
+3.-Tambien se permite el simbolo de dolar ($)
+4.-no debemos colocar puntos en las valiables (let 123.123 X no)
