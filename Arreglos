@@ -1,0 +1,72 @@
+Arreglos en JavaScript
+
+Son un objeto muy parecido a una lista de información, que contiene un grupo de elementos.
+Usualmente, ess información dentro del arreglo es del mismo tipo dato...
+
+Alguna de las formas de declarar un arreglo:
+const arr = [];
+console.log(arr);
+
+let videoJuegos =['Mario 3','Megaman','Chrono Triger'];
+cosole.log({videoJuegos});
+
+Y para imprimir un dato en especific de un arreglo:
+cosole.log(videoJuegos[0]);
+
+let arregloDeCosas = [
+  true,
+  123,
+  'Juan Carlos',
+  1+2,
+  function (){
+  },
+  ()=>{},
+  {a:1},
+  ['X','Megaman','Zero','Dr. Light',[
+    'Dr. Willy',
+    'Woodman'
+  ]]
+];
+//cosole.log({arregloDeCosas});
+//cosole.log(arregloDeCosas[0]);
+//cosole.log(arregloDeCosas[2]);
+//cosole.log(arregloDeCosas[7][3]);
+cosole.log(arregloDeCosas[7][4][1]);
+
+######### MAS SOBRE LOS ARREGLOS ##########
+let juegos = ['Zelda','Mario','Halo','Fifa22'];
+cosole.log('Largo:',juegos.length); -> Cuando se hace de esta forma se ejecutan varios metodos despues del punto(el cubo morado es que llevan parentesis y los otros no)
+
+let primero = juegos[2 - 2];
+let ultimo = juegos[juegos.length -1 ];
+
+console.log({primero,ultimo});
+
+Para barrer el arreglo:
+juegos.forEach( (elemento,indice,arr) => {
+ console.log({elemento,indice,arr});
+});
+
+Metodo para insertar  un nuevo elemento
+let nuevaLongitud = juegos.push('F-zero');
+
+console.log({nuevaLongitud,juegos});
+
+Para añadir un nuevo dato en el arreglo al principio:
+let nuevaLongitud = juegos.unshift('Super Mario 3');
+console.log({nuevaLongitud,juegos});
+
+Se quiere borrar un juego:
+juegos.pop();
+let juegoBorrado = juegos.pop();
+console.log({juegoBorrado, juegos});
+
+Borrar un dato del arreglo en especifico:
+let posicion = 1;
+console.log(juegos);
+let juegosBorrados = juegos.splice(posicion,2);
+console.log({juegosBorrados, juegos});
+
+Saber la posicion indice de un arreglo:
+let juegoIndex = juegos.indexOf('Fifa22') ->Para buscar algo dentro del arreglo y es casesensitive
+console.log({juegoIndex});
