@@ -31,3 +31,26 @@ console.log('Vivo',personaje[x] );
 
 console.log('Ultima Pelicula',personaje['ultima-pelicula'] );
 
+######### MAS DETALLES  ####
+delete personaje.edad; -> Se elimina un dato del objeto
+console.log(personaje);
+
+##Crear una nueva propiedad en el objeto
+personaje.casado = true;
+
+##Hacer que nuestro objeto se vea como un arreglo
+
+const entriesPares = Object.entries(personaje);
+console.log( entriesPares );
+
+Para hacer un bloqueo de las propiedades o las modificaciones
+Object.freeze( personaje );
+personaje.dinero = 10000;
+personaje.casado = false;
+personaje.direccion.ubicacion = 'Costa Rica';
+console.log( personaje );
+
+Listado de todas las propiedades que tiene ese objeto:
+const propiedades = Object.getOwnPropertyNames( personaje );
+const valores = Object.values( personaje );
+console.log({ personaje,valores });
