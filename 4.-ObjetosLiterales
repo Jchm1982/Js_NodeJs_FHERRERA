@@ -1,1 +1,33 @@
+OBJETOS LITERALES
+Son objetos que tienen pares de valores
+let personaje = {
+  nombre: 'Tony Stark',
+  codeName: 'Ironman',
+  vivo:false,
+  edad:40,
+  coords:{
+    lat: 34.034,
+    lng: -118.79
+  },
+  trajes:['Mark I','Mark V','Hulkbuster'],
+  direcciones:{
+    zip:'10880, 90265',
+    ubicacion:'Malibu, California',
+  },
+  'ultima-pelicula': 'infinity War',
+};
+
+console.log(personaje);
+console.log('Nombre',personaje.nombre);
+console.log('Nombre',personaje.['nombre']);->Se puede utilizar la notacion de corchete
+console.log('Edad ',personaje.edad);
+console.log('Cordenadas ',personaje.coords);
+console.log('Lat',personaje.coords.lat);
+console.log('Numero de Trajes',personaje.trajes.length);->conteo de trajes
+console.log('Ultimo Traje',personaje.trajes.[personajes.trajes.lenght - 1] );
+
+const x = 'vivo';
+console.log('Vivo',personaje[x] );
+
+console.log('Ultima Pelicula',personaje['ultima-pelicula'] );
 
