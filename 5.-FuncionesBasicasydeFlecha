@@ -1,1 +1,103 @@
+FUNCIONES
+El objetivo principal es centralizar la logica de un procedimiento que podemos re-utilizar varias veces
 
+-------- 1ra. forma de declarar una funcion
+function Saludar(){
+    console.log('Hola Mundo');
+}
+
+Saludar();
+
+-------- 2ra. forma de declarar una funcion FUNCIONES ANONIMAS
+
+const saludar2 = function(){
+    console.log('Hola Mundo');
+}
+
+saludar2();
+
+-------- 1ra. forma de declarar una funcion Con ARGUMENTOS
+
+function Saludar(nombre){
+    console.log('Hola '+ nombre);
+}
+
+saludar( 'Juan Carlos' );
+
+-------- 2ra. forma de declarar una funcion FUNCIONES ANONIMAS con ARGUMENTOS
+
+const saludar2 = function( nombre){
+    console.log('Hola '+ nombre);
+}
+
+saludar2( 'JC' );
+
+-------- Forma de declarar una funcion Con ARGUMENTOS
+
+function Saludar(nombre){
+    console.log(arguments);
+    console.log('Hola '+ nombre);
+}
+
+saludar( 'Juan Carlos',40,true,'Mexico' );
+
+
+######## FUNCIONES DE FLECHA O CONOCIDAS COMO LAMBDA FUNCTIONS ########
+
+const saludarFlecha = () => {  // Estos parentesis son opcionales
+    console.log('Hola Flecha');
+}
+
+
+saludarFlecha();
+
+
+-------- CON ARGUMENTOS
+const saludarFlecha2 =  nombre  => { 
+    console.log('Hola ' + nombre);
+}
+
+
+saludarFlecha2( 'Peter' );
+
+
+
+############# RETORNO DE LAS FUNCIONES #############
+En loe ejemplos anteriores de funciones regresan undefined, esto es por que en JavaScript si las funciones no tienen la palabra reservada RETURN explicita, no regresa nada
+
+
+function Saludar(nombre){
+    //console.log(arguments);
+    //console.log('Hola '+ nombre);
+    
+    return 10;
+    //Esto nunca se va a ejecutar 
+    console.log('Soy un codigo que esta despues del RETURN');
+}
+
+const retornoDeSaludar = saludar( 'Juan Carlos',40,true,'Mexico' );//1
+console.log( retornoDeSaludar );
+
+function Sumar(a,b){
+  return a + b;
+}
+
+Sumar(1,2);
+
+//const Sumar2 = (a,b) => {
+//  return a + b;
+//}
+
+// SOLO PARA CUANDO HAY UN REQUERIMIENTO
+
+const Sumar2 = (a,b) => a + b;
+
+console.log( Sumar2(1,2) );
+
+function getAleatorio(){
+  return Math.random();
+}
+console.log( getAleatorio(1,2) );
+
+const getAleatorio2= () => Math.random();
+console.log( getAleatorio2() );
