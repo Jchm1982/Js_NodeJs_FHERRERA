@@ -1,0 +1,88 @@
+Se hacen 2 ejemplos:
+Se declaran 2 variables primitivas
+let a = 10;
+let b = a;
+a= 30;
+
+console.log({ a,b });//Todos lo valore sprimitivos se pasan por valor
+
+//#### EJEMPLO 1
+let juan ={ nombre: 'juan'};
+let ana = juan;
+ana.nombre = 'Ana';//aqui cambia el nombre de las dos variables, les asigna ana a los dos nombres
+//Se cambia por que todos los objetos (que es este ejemplo) son pasados por referencia
+//Todos los objetos son pasados por referencia 
+
+console.log({ juan,ana });
+
+//Cuando se quieran crear una copia de un objeto, SIMPLEMENTE EL OBJETO LO DEBEMOS COLOCAR ENTRE LLAVES CON UN OPERADOR ESPECIAL PARA SEPARAR TODAS LAS PROPIEDADES Y VALORES DE UN OBJETO EL OPERADOR SPREG ...(TRES PUNTOS)
+//CUANDO SE UTILIZAN LOS ... TAMBIEN SE LLAMA REST (CUANDO SE PONE COMO ARGUMENTO EN ALGUNA FUNCION, UNE TODOS LOS ARGUMENTOS Y TRANSFORMALOS COMO UN ARREGLO)
+//Y CUANDO SE UTILIZAN FUERA DE UNA FUNCION ES EL OPERADOR SPREAD Y SIMBOLIZA QUE SEPARE TODOS LOS ELEMENTOS
+
+      //###RESOLUCION ejemplo 1:
+let juan ={ nombre: 'juan'};
+let ana = { ...juan };
+ana.nombre = 'Ana';
+
+
+
+//###EJEMPLO 2
+const cambiaNombre = (persona) => {
+  persona.nombre = 'Tony';
+  return persona;
+}
+
+let peter = { nombre: 'Peter' };
+let tony = cambiarNombre(peter);
+
+console.log({ peter,tony });
+
+//### RESOLUCION EJEMPLO 2
+//RESOLUCION DEL CASO EN EL PARAMETRO
+
+const cambiaNombre = ( { ...persona } ) => { // SE ASIGNA COMO SI FUERA UN OBJETO Y SE UTILIZA EL OPERADOR SPREAG ES PARA ROMPER LA RELACION QUE HAY
+  persona.nombre = 'Tony';
+  return persona;
+}
+
+let peter = { nombre: 'Peter' };
+let tony = cambiarNombre(peter);
+
+console.log({ peter,tony });
+
+// MISMO EJERCICIO CON ARREGLOS
+//Primera forma de romper la relacion
+const frutas = ['manzana','Pera','Piña'];
+const otrasFrutas = [...frutas];
+
+//Si quiero agregar una nueva fruta
+otrasFrutas.push('Mango');
+
+console.table( {frutas,otrasFrutas} );
+
+//Segunda forma de romper la relacion
+
+const frutas = ['manzana','Pera','Piña'];
+const otrasFrutas = frutas.slice();
+
+//Si quiero agregar una nueva fruta
+otrasFrutas.push('Mango');
+
+console.table( {frutas,otrasFrutas} );
+
+// Hay una forma para evaluar cual de las 2 formas anteriores es la más eficiente
+
+const frutas = ['manzana','Pera','Piña'];
+
+console.time('slice');
+const otrasFrutas = frutas.slice();
+console.timeEnd('slice');
+
+console.time('pread');
+const otrasFrutas2 = [...frutas];
+console.timeEnd('spread');
+
+//Si quiero agregar una nueva fruta
+otrasFrutas.push('Mango');
+
+console.table( {frutas,otrasFrutas} );
