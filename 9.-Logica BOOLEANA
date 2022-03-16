@@ -1,0 +1,44 @@
+Logica Booleana
+
+const regresaTrue = () => {
+  console.log('Regresa TRUE');
+  return true;
+}
+
+
+const regresaFalse = () => {
+  console.log('Regresa FALSE');
+  return false;
+}
+
+
+console.war('Not o la negaación');
+console.lg( true ); //Salida por consecuencia es true
+//La negacion es transformar el valor bolleano en su opuesto. La negacion es el signo de admiración
+
+console.lg( !true ); //FALSE
+console.lg( !false ); //TRUE
+
+console.log ( !regresaFalse() );//true
+
+console.war('And');// True si todos los valores son verdaderos
+console.war( true && true); //True
+console.war( true && false); //False
+console.war( true && !false); //True
+
+
+console.log('==========');
+console.log( regresaFalse() && regresaTrue() ); //False
+console.log( regresaTrue() && regresaFalse() ); //False
+
+
+console.log('===== && =====');
+regresaFalse() && regresaTrue();
+
+console.war('OR');//TRUE
+console.log( true || false);
+console.log( false || false);
+
+
+console.log( regresaTrue() || regresaFalse() ); //False
+console.log( regresaFalse() || regresaTrue() ); //False
